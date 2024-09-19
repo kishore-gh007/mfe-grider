@@ -16,7 +16,8 @@ const prodConfig = {
       name: "containerApp",
       remotes: {
         marketingApp: `marketingApp@${domain}/marketing/latest/remoteEntry.js`,
-        authApp: "authApp@http://localhost:8082/remoteEntry.js",
+        authApp: `authApp@${domain}/auth/latest/remoteEntry.js`,
+        dashboardApp: `dashboardApp@${domain}/dashboard/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),

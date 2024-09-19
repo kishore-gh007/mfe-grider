@@ -8,6 +8,7 @@ import {
 
 const AuthLazy = lazy(() => import("./container/AuthApp"));
 const MarketingLazy = lazy(() => import("./container/MarketingApp"));
+const DashboardLazy = lazy(() => import("./container/DashboardApp"));
 
 export default () => {
   const generateClassName = createGenerateClassName({
@@ -23,6 +24,7 @@ export default () => {
         <Suspense fallback={<div>Loading . . .</div>}>
           <Switch>
             <Route path="/auth" component={AuthLazy} />
+            <Route path="/dashboard" component={DashboardLazy} />
             <Route path="/" component={MarketingLazy} />
           </Switch>
         </Suspense>
